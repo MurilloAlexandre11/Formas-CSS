@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #4c4766, #bbb9ca, #ffffff);
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#container {
+  position: relative;
+  width: 300px;
+  height: 500px;
+}
+
+.robot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Cabeça */
+.head {
+  width: 120px;
+  height: 100px;
+  background: radial-gradient(circle at center, #ffffff, #82798f);
+  clip-path: polygon(10% 0%, 90% 0%, 100% 40%, 100% 100%, 0% 100%, 0% 40%);
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Olhos */
+.eye {
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 25px;
+  z-index: 3;
+}
+
+.eye.left {
+  left: 35px;
+}
+
+.eye.right {
+  right: 35px;
+}
+
+/* Corpo */
+.body {
+  width: 140px;
+  height: 160px;
+  background: linear-gradient(to bottom, #ffffff, #87829c);
+  margin: 20px auto;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+}
+
+/* Antena */
+.antenna {
+  width: 8px;
+  height: 40px;
+  background: #9c1f1f;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
+/* Braços */
+.arm {
+  width: 20px;
+  height: 100px;
+  background: #67646e;
+  position: absolute;
+  top: 130px;
+}
+
+.arm.left {
+  left: -30px;
+  transform: rotate(-10deg);
+}
+
+.arm.right {
+  right: -30px;
+  transform: rotate(10deg);
+}
+
+/* Pernas */
+.leg {
+  width: 20px;
+  height: 80px;
+  background: #68666b;
+  position: absolute;
+  bottom: 0;
+}
+
+.leg.left {
+  left: 40px;
+}
+
+.leg.right {
+  right: 40px;
+}
+
+/* Espada */
+.sword {
+  width: 10px;
+  height: 100px;
+  background: linear-gradient(to top, #1f1f1f, #cc0011);
+  position: absolute;
+  top: 120px;
+  right: -45px;
+  transform: rotate(10deg);
+  z-index: 1;
+  border-radius: 2px;
+}
+
+.sword::before {
+  content: "";
+  width: 20px;
+  height: 10px;
+  background: #333;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Escudo */
+.shield {
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle at center, #9f95b1, #949494);
+  clip-path: polygon(50% 0%, 100% 40%, 80% 100%, 20% 100%, 0% 40%);
+  position: absolute;
+  top: 120px;
+  left: -70px;
+  z-index: 2;
+  box-shadow: 0 0 15px #ffffff;
+}
